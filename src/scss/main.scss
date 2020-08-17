@@ -1,0 +1,26 @@
+@import "second";
+
+.red {
+	color: #000;
+
+	&__item {
+		color: red;
+	}
+}
+
+body {
+	background-color: green;
+	font-family: 'Roboto';
+}
+
+
+
+@import "vars";
+@import "global";
+@import "fonts";  
+@import "second"; 
+
+ 
+
+//media
+@import "media";
