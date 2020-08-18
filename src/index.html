@@ -12,6 +12,7 @@
     <meta name="robots" content="index, follow">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Document</title>
+     <link rel="icon" href="img/favicon/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/main.min.css">
     <script src="js/main.js" defer></script>
 </head>
@@ -20,13 +21,52 @@
     <!--[if lt IE 8]>
 <p class="browserupgrade">Вы используете <strong>устаревшую</strong> версию браузера. Пожалуйста <a href="http://browsehappy.com/">обновите свой браузер</a>.</p>
 <![endif]-->
-    <h1>Страница</h1>
-    <svg class="">
+    
+    <header class="header">
+        <div class="header__top">
+            <div class="header__top-contacts">
+                <a href="tel:71234567890">
+                    <svg class="phoneIcon"><use xlink:href="img/sprite.svg#header--phoneIcon"></use></svg>
+                    +7 (123) 456-78-90 
+                </a>
+                
+                <span>
+                    <svg class="socialIcon viber"><use xlink:href="img/sprite.svg#header--viber"></use></svg>
+                    <svg class="socialIcon whatsApp"><use xlink:href="img/sprite.svg#header--whatsApp"></use></svg>
+                    Viber / WhatsApp
+                </span>
+            </div>
+            <div class="header__top-logo">Relax Live
+                <!-- <img src="img/logo/" alt="Логотип"> -->
+            </div>
+            <div class="header__top-menu">
+                <span>Меню</span>
+                <svg class="menuIcon"><use xlink:href="img/sprite.svg#header--menuIcon"></use></svg>
+            </div>    
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <svg class="">
         <use xlink:href="img/sprite.svg#svgs--svg"></use>
     </svg>
     <svg class="">
         <use xlink:href="img/sprite.svg#svgs--svg2"></use>
-    </svg>
+    </svg> -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 </body>
 </html>
