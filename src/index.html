@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,7 +10,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="robots" content="index, follow">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Document</title>
+    <title>Строительная компания | Оптима</title>
      <link rel="icon" href="img/favicon/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/main.min.css">
     <script src="js/main.js" defer></script>
@@ -26,23 +25,85 @@
         <div class="header__top">
             <div class="header__top-contacts">
                 <a href="tel:71234567890">
-                    <svg class="phoneIcon"><use xlink:href="img/sprite.svg#header--phoneIcon"></use></svg>
+                    <svg class="phoneIcon"><use xlink:href="img/sprite.svg#phoneIcon"></use></svg>
                     +7 (123) 456-78-90 
                 </a>
                 
                 <span>
-                    <svg class="socialIcon viber"><use xlink:href="img/sprite.svg#header--viber"></use></svg>
-                    <svg class="socialIcon whatsApp"><use xlink:href="img/sprite.svg#header--whatsApp"></use></svg>
+                    <svg class="socialIcon viber"><use xlink:href="img/sprite.svg#viber"></use></svg>
+                    <svg class="socialIcon whatsApp"><use xlink:href="img/sprite.svg#whatsApp"></use></svg>
                     Viber / WhatsApp
                 </span>
             </div>
-            <div class="header__top-logo">Relax Live
-                <!-- <img src="img/logo/" alt="Логотип"> -->
+            <div class="header__top-logo">
+                <a href="#"><img src="img/header/logo.png" alt="Логотип"></a>
             </div>
             <div class="header__top-menu">
                 <span>Меню</span>
-                <svg class="menuIcon"><use xlink:href="img/sprite.svg#header--menuIcon"></use></svg>
+                <svg class="menuIcon"><use xlink:href="img/sprite.svg#menuIcon"></use></svg>
             </div>    
+        </div>
+
+        <div class="header__text">
+            <h1 class="header__text-title">Гибкие и универсальные услуги ремонта жилых помещений</h1>   
+            <div class="header__text-desc">Широкий спектр услуг позволяет нам гибко подстраиваться под любого клиента</div>   
+            <div class="services-title">Вызывайте нашего специалиста прямо сейчас и в течении 24 часов Вы получите:</div>
+        </div> 
+
+        <div class="services-wrap">
+            <div class="services">
+                <div class="services__item services__item-item1">
+                    <svg class="services__img"><use xlink:href="img/sprite.svg#circle_1_icon"></use></svg>
+                    <div class="services__desc">
+                        Замер помещения для будущего 
+                        <span>ремонта</span>
+                    </div>
+                </div>
+
+                <div class="services__item services__item-item2">
+                    <svg class="services__img"><use xlink:href="img/sprite.svg#circle_2_icon"></use></svg>
+                    <div class="services__desc">
+                        Смету работ для вашего
+                        <span>проекта</span>
+                    </div>
+                </div>
+
+                <div class="services__item services__item-item3">
+                    <svg class="services__img"><use xlink:href="img/sprite.svg#circle_3_icon"></use></svg>
+                    <div class="services__desc">
+                        Расчет стоимости  
+                        <span>метериалов</span>
+                    </div>
+                </div>
+
+                <div class="services__item services__item-item4">
+                    <svg class="services__img"><use xlink:href="img/sprite.svg#circle_4_icon"></use></svg>
+                    <div class="services__desc">
+                        Предварительную стоимость
+                        <span>ремонта</span>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback">
+                <div class="feedback-wrap">
+                    <div class="feedback__icon"></div>
+                    <div class="feedback__title">Получите консультацию от специалиста в удобное для Вас время</div>
+                    <div class="feedback__form" id="feedback1">
+                        <div class="feedback__input">
+                            <input class="input feedback__input-input" type="text" placeholder="Введите номер телефона" id="feedback-input1" minlength="18">
+                        </div>
+                        <button class="btn">Перезвоните мне</button>
+                        <div class="checkbox">
+                            <input class="checkbox__input" type="checkbox" id="checkbox1">
+                            <label class="checkbox__label" for="checkbox1"></label>
+                            <div class="checkbox__desc checkbox__desc_round-feedback">
+                                Я соглашаюсь с 
+                                <span class="link-privacy">политикой конфиденциальности</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
