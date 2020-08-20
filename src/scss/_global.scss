@@ -32,6 +32,7 @@ body{
   font-family: 'NotoSans';
   font-size: 19px;
   line-height: 24px;
+  background-color: #FBFAF8;
 }
 /* .wrapper{
   display: flex;
@@ -45,8 +46,24 @@ body{
   flex: 0 0 auto;
 } */
 .container{
-  max-width: 1600px;
+  max-width: 1058px;
+  width: 100%;
+  height: auto;
   margin: 0  auto;
   padding: 0 15px;
+}
+
+.iconTriangle{
+    &::after{
+        content: ''; 
+        position: absolute; 
+        left: 50%;
+        bottom: -50px; 
+        border: 20px solid transparent; 
+        border-top: 15px solid #EF8926; 
+        border-radius: 3px;
+        position: absolute;
+        transform: translate(-50%, -50%); 
+    }
 }
 
