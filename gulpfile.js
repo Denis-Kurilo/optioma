@@ -1,23 +1,24 @@
-const {src, dest, parallel, series, watch} = require('gulp');
-const sass = require('gulp-sass');
-const notify = require('gulp-notify');
-const rename = require('gulp-rename');
-const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
-const sourcemaps = require('gulp-sourcemaps');
-const browserSync = require('browser-sync').create();
-const fileinclude = require('gulp-file-include');
-const svgSprite = require('gulp-svg-sprite');
-const ttf2woff = require('gulp-ttf2woff');
-const ttf2woff2 = require('gulp-ttf2woff2');
-const fs = require('fs');
-const del = require('del');
-const webpack = require('webpack');
-const webpackStream = require('webpack-stream');
-const uglify = require('gulp-uglify-es').default;
-const tiny = require('gulp-tinypng-compress');
-const gutil = require('gulp-util');
-const ftp = require('vinyl-ftp');
+const {src, dest, parallel, series, watch} = require('gulp'),
+			sass = require('gulp-sass'),
+			notify = require('gulp-notify'),
+			rename = require('gulp-rename'),
+			autoprefixer = require('gulp-autoprefixer'),
+			cleanCSS = require('gulp-clean-css'),
+			sourcemaps = require('gulp-sourcemaps'),
+			browserSync = require('browser-sync').create(),
+			fileinclude = require('gulp-file-include'),
+			svgSprite = require('gulp-svg-sprite'),
+			ttf2woff = require('gulp-ttf2woff'),
+			ttf2woff2 = require('gulp-ttf2woff2'),
+			fs = require('fs'),
+			del = require('del'),
+			webpack = require('webpack'),
+			webpackStream = require('webpack-stream'),
+			uglify = require('gulp-uglify-es').default,
+			tiny = require('gulp-tinypng-compress'),
+			gutil = require('gulp-util'),
+			ftp = require('vinyl-ftp'),
+			htmlmin = require('gulp-htmlmin');
 
 
 const fonts = () => {
@@ -93,6 +94,7 @@ const htmlInclude = () => {
 			prefix: '@',
 			basepath: '@file'
 		}))
+		.pipe(htmlmin({ collapseWhitespace: true }))
 		.pipe(dest('./app'))
 		.pipe(browserSync.stream());
 }
