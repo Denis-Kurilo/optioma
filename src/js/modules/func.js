@@ -1,5 +1,5 @@
 const asd = () => {
-	console.log('asdsdfs')
+	console.log('asdsdfs');
 
 }
 

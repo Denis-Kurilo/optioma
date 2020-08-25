@@ -1359,7 +1359,7 @@
             position: relative;
             margin: 0 auto;
             padding: 0;
-            overflow: hidden;
+            // overflow: hidden;
             
             h2{
                 margin-top: 15px;
@@ -1378,37 +1378,86 @@
                 }
             }
         }
-        .title_block{
+        .accordion-item{
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .accordion-item__triger{
             position: relative;
             font-size: 20px;
             font-weight: 300;
             letter-spacing: 1px;
             line-height: 27px;
             display: block;
-            margin-top: 42px;
+            margin-top: 30px;
             padding: 16px 45px 16px 50px;
             cursor: pointer;
             color: #322823;
             background: #fff;
             box-shadow: 0 4px 70px rgba(224,216,205,.1), 0 4px 30px rgba(224,216,205,.1);
+            border: 1px solid #E7E7E7;
             border-radius: 50px;
         }
-        .msg {
-            position: relative;
-            margin-top: 0;
-            max-height: 0;
+        .accordion-item__input{
+            position: absolute;
+            top: 0;
+            left: 0;
             opacity: 0;
-            transform: translate(0,50%);
-            transition: .5s ease-in-out;
         }
-        .msg-active~.msg {
+        .accordion-item__content {
+            position: relative;
+            top: -12px;
+            margin-top: 0;
+            // height: 0;
+            // visibility: hidden;
+            padding: 20px;
+            font-size: 18px;
+            display: none;
+            transform: translate(0,50%);
+            transition: .3s ease-in-out;
+            z-index: 10;  
+            background: #fff; 
+            // border: 1px solid ;
+            transition: all 0.9s;
+            animation: showContent 1s linear forwards;
+            border-radius: 0 0 30px 30px;
+            border: 1px solid #E7E7E7;
+            
+            p{
+                &:first-child{
+                    margin: 0;
+                }
+            }
+        }
+        @keyframes showContent {
+          0% {
+            opacity: 0;
+          }
+          50% {
+            opacity: .5;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        .accordion-item__input:checked ~ .accordion-item__triger{
+            border-radius: 30px 30px 0 0;
+        }       
+        .accordion-item__input:checked ~ .accordion-item__content{
+            // opacity: 1;
+            display: block;
+            // transition: display 0.9s;
+            // visibility: visible;
+            transform: translateY(10px);
+        }       
+        /*  .msg-active~.msg {
             position: relative;
             overflow: hidden;
             max-height: 100%;
             opacity: 1;
             transition: .5s ease-in-out;
             transform: translate(0,0);
-        }
+         */
 /* faq-end */
 
 /* partners */
@@ -1471,10 +1520,14 @@
     .maps{
         width: 50%;
     }
+    .map-color{
+        color: #F7A900;
+    }
     .contacts{
         margin-right: auto;
         padding-left: 30px;
         color: #322823;
+        margin-bottom: 30px;
     }
     .contacts__title{
         font-weight: 600;

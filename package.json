@@ -8,7 +8,12 @@
   },
   "author": "Denis Kurilo",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "be": "0.0.3",
+    "install": "^0.13.0",
+    "modules": "^0.4.0",
+    "to": "^0.2.9"
+  },
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
