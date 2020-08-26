@@ -43,22 +43,25 @@
         align-items: center;
         margin-left: auto;
         margin-right: auto;
+        padding: 0 30px;
         z-index: 1;
         
-        &-contacts{
+        &-contacts span{
         	color: #fff;
         	a{
         		display: flex;
     	        align-items: center;
     	        margin-bottom: 3px;
         	}
-        	span{
-        		color: #fff;
-        		font-size: 11px;
-        		display: flex;
-    	        align-items: center;
-           	    justify-content: flex-end;
-        	}
+        }
+        &-contacts{
+            div{
+                color: #fff;
+                font-size: 11px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
         }
         &-logo{
             img{
@@ -141,9 +144,10 @@
     .services__item{
         width: 136px;
         height: 136px;
-        background-image: url('../img/svg/circle.svg');
+        // background-image: url('../img/svg/circle.svg');
         position: relative;
         top: -20px;
+    
         
         &-item1{
            left: 120px; 
@@ -342,6 +346,9 @@
             }
         }
     }
+    .btn-mobile{
+        display: none;
+    }
 /* header-end */
 
 /* success */
@@ -374,6 +381,7 @@
 		    height: 800px;
 		    background-image: url('../img/decor/success_right_decor.png');
 		    background-repeat: no-repeat;
+            z-index: -1;
 	    }
 	    .row{
 	    	height: 100%;
@@ -1599,10 +1607,14 @@
         height: 65px;
         position: absolute;
         max-width: 100%;
-        top: 0;
+        /*top: 0;
         left: 0;
         right: 0;
-        bottom: 0;
+        bottom: 0;*/
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
         margin: auto;
     }
     .next{
@@ -1619,4 +1631,260 @@
         height: 83px;
     }
 /* icons-end */
+
+/* popup */
+    .popup {
+        position: fixed;
+        display: flex;
+        visibility: hidden;
+        // visibility: visible;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        justify-content: center;
+        align-items: center;
+        background: rgba(50,40,35,.4);
+        color: #322823;
+        z-index: 9999;
+    }
+    /* .popup2 {
+        position: fixed;
+        display: flex;
+        // visibility: hidden;
+        visibility: visible;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        justify-content: center;
+        align-items: center;
+        background: rgba(50,40,35,.4);
+        color: #322823;
+        z-index: 9999;
+    } */
+    .feedback-wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 510px;
+        height: 510px;
+        border-radius: 50%;
+        border: 20px solid rgba(243,238,233,.8);
+        background-color: #fff;
+        z-index: 2;
+    }
+    .popup-thank-bg {
+        background: linear-gradient(90deg,#f48922 0,#ffb015 100%);
+    }
+    .close {
+        position: absolute;
+        top: 47px;
+        right: 34px;
+        font-size: 38px;
+        font-weight: 200;
+        color: rgba(50,40,35,.5);
+        z-index: 105;
+        cursor: pointer;
+        
+        &::before{
+            content: "";
+            width: 20px;
+            height: 20px;
+            font-size: 15px;
+            position: absolute;
+            top: 0;
+            background-image: url('../img/svg/close.svg');
+            background-repeat: no-repeat;
+            background-size: cover;            
+        }
+    }
+    .close-thank {
+        top: -20px;
+        right: -20px;
+    }
+    .popup-thank-content {
+        width: 386px;
+        height: 266px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        color: #fff;
+    }
+    .popup-thank__title {
+        font-family: 'MontserratAlternates-SemiBold';
+        font-size: 30px;
+        line-height: normal;
+        text-align: center;
+        span{
+            display: block;
+        }
+    }
+    .popup-thank__descr {
+        font-size: 19px;
+        line-height: 30px;
+        color: rgba(255,255,255,.7);
+    }
+    .popup-thank__logo {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 30px;
+        
+        img{
+            width: 150px;
+            height:102px;
+        }
+    }
+
+    //feedback-popup
+        .feedback-popup{
+            visibility: hidden;
+            // visibility: visible;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            background-image: none;
+        }
+
+    //menu
+    .popup-dialog-menu {
+        position: absolute;
+        visibility: visible;
+        top: 0;
+        right: 0;
+        transform: translate3d(645px,0,0);
+        width: 639px;
+        max-height: 874px;
+        height: 100%;
+        background-image: url('../img/fon/menu-bg.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: cover;
+        transition: .2s;
+        z-index: 2000;
+    }
+    .menu__inner{
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+    .menu__list{
+        position: relative;
+        font-weight: 500;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        color: #fff;
+    }
+    .popup-menu-nav {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 60px;
+        height: 100%;
+    }
+    .popup-menu-title {
+        font-family: 'MontserratAlternates-ExtraBold';
+        font-style: normal;
+        font-size: 30px;
+    }
+    .popup-menu__list{
+        margin-top: 40px;
+        ul{
+            list-style-type: none;
+            li{
+                text-align: right;
+                font-size: 18px;
+                letter-spacing: 1px;
+                text-decoration: none; 
+                margin-top: 20px; 
+                
+                a{
+                    position: relative;
+                        &::before{
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: -45px;
+                        width: 0px;
+                        height: 2px;
+                        background: #fff;
+                        transition: all .1s;
+                    }
+
+                    &:hover{
+                        color: rgba(255,255,255, .6);
+                        &::before{
+                            width: 20px;
+                        }
+                    }
+                }
+                
+                &:first-child{
+                    margin-top: 0px;
+                }    
+            }
+        }
+    }
+
+    .menu__copy {
+        display: flex;
+        width: 110px;
+        height: 105%;
+        margin-top: 150px;
+        padding-right: 44px;
+        writing-mode: vertical-rl;
+        font-size: 12px;
+        color: rgba(255,255,255,.5);
+    }
+/* popup-end */
+
+/* arrow-top */
+    .arrow-top{
+        display: block;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 100;
+        a{
+            border: 2px solid $arrow-top;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: $shadow-btn;
+            position: relative;
+            transition: all .3s;
+            
+            svg{
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform:translate(-50%, -50%);
+                
+                fill: $arrow-top;
+            }
+            &:hover{
+                box-shadow: none;
+                background-color: #F7EBDD;
+            }
+        }
+    }
+/* arrow-top-end */
 
