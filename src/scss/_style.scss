@@ -552,6 +552,9 @@
         width: 188px;
         padding-top: 10px;
     }
+    .row-mobile{
+        display: none;
+    }
     .success-mobile{
         display: none;
     }
@@ -609,7 +612,7 @@
     }
 
     .repair-types-tab{
-        width: 39.5%;
+        // width: 39.5%;
         margin-left: auto;
     }
     .repair-types-title {
@@ -639,17 +642,18 @@
         max-width: 100%;
     }
     .nav-list-repair {
-        min-width: 390px;
+        width: 320px;
         display: block;
     }
     .repair-types-nav__item:first-child {
         margin-top: 0;
     }
     .button_o {
+        width: 100%;
         position: relative;
         border: 2px solid #EEEBE5;
         border-radius: 25px;
-        padding: 10px 35px;
+        padding: 10px;
         z-index: 1;
         cursor: pointer;
         background-color: transparent;
@@ -705,6 +709,14 @@
         margin-top: 22px;
         font-size: 20px;
         color: #322823;
+    }
+    .repair-types__inner{
+        display: flex;
+    }
+    .repair-types-tab{
+        .section-title{
+            font-size: 27px;
+        }
     }
 /* repair-end */
 
