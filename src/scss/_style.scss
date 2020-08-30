@@ -149,7 +149,6 @@
     .services__item{
         width: 136px;
         height: 136px;
-        // background-image: url('../img/svg/circle.svg');
         position: relative;
         top: -20px;
     
@@ -359,7 +358,6 @@
 /* success */
 	.success{
 	    position: relative;
-	    // padding: 110px 0 181px;
         padding: 110px 181px 50px 181px;
 	    margin-top: 100px;
 	    background-image: url('../img/svg/big_round_decor.svg');
@@ -410,8 +408,8 @@
 	    max-width: 986px;
 	    margin-left: auto;
 	    margin-right: auto;
-	    padding-left: 12px;
-	    padding-right: 12px;
+	    padding-left: 20px;
+	    padding-right: 30px;
 	    z-index: 1;
 	}
 	.success-item {
@@ -459,8 +457,6 @@
     		opacity: 1;
     	} 
         .success-item-popup{
-            /*visibility: visible; 
-            opacity: 1;*/
             display: block;
         }
     }
@@ -483,7 +479,6 @@
 	    position: absolute;
         display: none;
 	    bottom: 90px;
-	    // visibility: collapse; 
 	    width: 423px;
 	    padding: 10px 20px 10px;
 	    font-style: normal;
@@ -492,7 +487,6 @@
 	    font-size: 19px;
 	    text-align: left;
 	    transform: translate3d(0,-5px,0);
-	    // opacity: .1;
         background-color: #FBFAF8;
 	    
 	    &::before{
@@ -540,8 +534,6 @@
         line-height: 45px;
         position: relative;
         &::before{
-            // margin-left: -108px;
-            // margin-top: -110px;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -616,7 +608,6 @@
     }
 
     .repair-types-tab{
-        // width: 39.5%;
         margin-left: auto;
     }
     .repair-types-title {
@@ -629,8 +620,6 @@
         &::before{
             top: 50%;
             left: 50%;
-            /*margin-left: -120px;
-            margin-top: -105px;*/
             position: absolute;
             top: 50%;
             left: 50%;
@@ -722,11 +711,6 @@
     .repair-types__inner{
         display: flex;
     }
-    .repair-types-tab{
-        .section-title{
-            font-size: 27px;
-        }
-    }
 /* repair-end */
 
 /* feedback-block */
@@ -738,7 +722,6 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 0 0;
-        
         z-index: 2;
         
         &::before{
@@ -771,6 +754,9 @@
             background-position-y: 100%;
             background-position-x: center;
         }
+    }
+    .feedback-block2{
+        top: 0;
     }
 
      .feedback-block__title{
@@ -947,8 +933,6 @@
     .portfolio-title{
         position: relative;
         &::before{
-            /*margin-left: -88px;
-            margin-top: -80px;*/
             position: absolute;
             top: 50%;
             left: 50%;
@@ -966,7 +950,7 @@
     .portfolio__slider-inner {
         display: flex;
         flex-wrap: wrap;
-        margin: 40px 0 200px 8px;
+        margin: 60px 0 200px 8px;
         border-radius: 20px;
         overflow: hidden;
         z-index: 1;
@@ -1002,11 +986,17 @@
         transition: 0.2s; 
         
         &::before{
-            content: '🔎';
+            content: '';
+            background-image: url('../img/svg/search.svg');
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform:translate(-50%, -50%);
             font-size: 80px;
             color: #FFF;
-            width: 100px;
-            height: 50px;
+            width: 70px;
+            height: 70px;
         }
         
         span{
@@ -1069,8 +1059,6 @@
             left: 50%;
             top: 50%;
             transform:translate(-50%, -50%);
-            /*margin-left: -108px;
-            margin-top: -110px;*/
             width: 216px;
             height: 220px;
             background-image: url('../img/svg/title4.svg');
@@ -1123,7 +1111,6 @@
     .problems-mobile{
         display: none;
         .problems-title{
-            font-size: 25px;
             line-height: 35px;
             
             &:before{
@@ -1189,14 +1176,12 @@
     .designs-title{
         position: relative;
         &::before{
-            /*margin-left: -112px;
-            margin-top: -75px;*/
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 225px;
-            height: 200px;
+            width: 216px;
+            height: 220px;
             background-image: url('../img/svg/title5.svg');
             background-repeat: no-repeat;    
         }
@@ -1360,8 +1345,6 @@
         position: relative;
         
         &::before{
-            /*margin-left: -100px;
-            margin-top: -75px;*/
             position: absolute;
             top: 50%;
             left: 50%;
@@ -1383,6 +1366,7 @@
         overflow-y: scroll;
         font-size: 16px;
         line-height: 24px;
+        margin-bottom: 30px;
         z-index: 0;
     }
 
@@ -1436,7 +1420,7 @@
 /* faq */
     .faq {
         position: relative;
-        top: 180px;
+        top: 100px;
         padding-top: 84px;
         padding-bottom: 220px;
         
@@ -1444,12 +1428,12 @@
             content: '';
             position: absolute;
             background-repeat: no-repeat;
-            z-index: 0;
+            z-index: -1;
         }
         
         &::before{
             left: 0;
-            top: -25px;
+            top: -180px;
             width: 300px;
             height: 520px;
             background-image: url('../img/decor/faq_left_decor.png');
@@ -1467,8 +1451,6 @@
         position: relative;
         
         &::before{
-            /*margin-left: -77px;
-            margin-top: -77px;*/
             position: absolute;
             top: 50%;
             left: 50%;
@@ -1489,7 +1471,6 @@
             position: relative;
             margin: 0 auto;
             padding: 0;
-            // overflow: hidden;
             
             h2{
                 margin-top: 15px;
@@ -1538,8 +1519,6 @@
             position: relative;
             top: -12px;
             margin-top: 0;
-            // height: 0;
-            // visibility: hidden;
             padding: 20px;
             font-size: 18px;
             display: none;
@@ -1547,7 +1526,6 @@
             transition: .3s ease-in-out;
             z-index: 10;  
             background: #fff; 
-            // border: 1px solid ;
             transition: all 0.9s;
             animation: showContent 1s linear forwards;
             border-radius: 0 0 30px 30px;
@@ -1574,33 +1552,20 @@
             border-radius: 30px 30px 0 0;
         }       
         .accordion-item__input:checked ~ .accordion-item__content{
-            // opacity: 1;
             display: block;
-            // transition: display 0.9s;
-            // visibility: visible;
             transform: translateY(10px);
         }       
-        /*  .msg-active~.msg {
-            position: relative;
-            overflow: hidden;
-            max-height: 100%;
-            opacity: 1;
-            transition: .5s ease-in-out;
-            transform: translate(0,0);
-         */
 /* faq-end */
 
 /* partners */
     .partners {
         position: relative;
-        top: 180px;
+        top: 0px;
         padding-top: 100px;
     }
     .partners__title{
         position: relative;
         &::before{
-            /*margin-left: -73px;
-            margin-top: -70px;*/
             position: absolute;
             top: 50%;
             left: 50%;
@@ -1616,7 +1581,8 @@
             left: 50%;
             margin-left: -283px;
             content: '';
-            width: 566px;
+            max-width: 566px;
+            width: 100%;
             height: 315px;
             background-image: url('../img/svg/partners_round_decor1.svg');
             background-repeat: no-repeat;
@@ -1645,8 +1611,8 @@
 /* footer */
     .footer{
         position: relative;
-        top: 250px;
-    }
+        top: 100px;
+   
     .footer__inner{
         background-color: #FFF;
         display: flex;
@@ -1682,7 +1648,7 @@
             left: 0;
         }
     }
-
+ }
     .phoneEmail{
         a{
             display: block;
@@ -1772,7 +1738,6 @@
         position: fixed;
         display: flex;
         visibility: hidden;
-        // visibility: visible;
         top: 0;
         left: 0;
         width: 100%;
