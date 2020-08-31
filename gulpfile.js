@@ -106,7 +106,7 @@ const imgToApp = () => {
 
 const resources = () => {
 	return src('./src/resources/**')
-		.pipe(dest('./app'))
+		.pipe(dest('./app/resources'))
 }
 
 const clean = () => {

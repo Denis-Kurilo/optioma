@@ -2,11 +2,19 @@
 
 import map from './modules/map';
 import asd from './modules/func';
+import popup from './modules/popup';
+import scrollDown from './modules/scrollDown';
+import maskPhone from './modules/maskPhone';
+import validationForm from './modules/validationForm';
+// import sendForm from './modules/sendForm';
 
 
 
 
-
-//calc
 map();
 asd();
+scrollDown();
+popup();
+maskPhone();
+validationForm();
+// sendForm();

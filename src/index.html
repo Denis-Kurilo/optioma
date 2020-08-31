@@ -21,9 +21,8 @@
 <p class="browserupgrade">Вы используете <strong>устаревшую</strong> версию браузера. Пожалуйста <a href="http://browsehappy.com/">обновите свой браузер</a>.</p>
 <![endif]-->
    <!-- header -->
-        <header class="header">
-            <div class="header__top">
-                
+        <header class="header" id="top">
+            <div class="header__top"> 
                 <div class="header__top-contacts">
                     <a href="tel:71234567890">
                         <svg class="phoneIcon"><use xlink:href="img/sprite.svg#phoneIcon"></use></svg>
@@ -44,7 +43,11 @@
                 <div class="header__top-menu">
                     <span>Меню</span>
                     <svg class="menuIcon"><use xlink:href="img/sprite.svg#menuIcon"></use></svg>
-                </div>    
+                </div>   
+
+                <div class="header__top-menu header__top-menu--mobile">
+                    <svg class="menuIcon menuIcon--mobile"><use xlink:href="img/sprite.svg#menuIcon-mobile"></use></svg>
+                </div> 
             </div>
 
             <div class="header__text">
@@ -91,15 +94,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="feedback">
+                <form class="feedback">
                     <div class="feedback-wrap">
                         <div class="feedback__icon"></div>
                         <div class="feedback__title">Получите консультацию от специалиста в удобное для Вас время</div>
-                        <div class="feedback__form" id="feedback1">
+                        <form class="feedback__form" id="feedback1">
                             <div class="feedback__input">
-                                <input class="input feedback__input-input" type="text" placeholder="Введите номер телефона" id="feedback-input1" minlength="18">
+                                <input class="input feedback__input-input" type="tel" placeholder="Введите номер телефона" id="feedback-input1" minlength="18">
                             </div>
-                            <button class="btn">Перезвоните мне</button>
+                            <button class="btn" type="submit">Перезвоните мне</button>
                             <div class="checkbox">
                                 <input class="checkbox__input" type="checkbox" id="checkbox1">
                                 <label class="checkbox__label" for="checkbox1"></label>
@@ -108,19 +111,19 @@
                                     <span class="link-privacy">политикой конфиденциальности</span>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
-                </div>
+                </form>
             </div>
             <div class="btn-mobile">
-                <button class="btn">Перезвоните мне</button>
+                <button class="btn mobile-btn">Перезвоните мне</button>
             </div>
         </header>
     <!-- header-end -->
     
     <!-- success -->
-        <section class="success success-desctop" id="success">
-            <div class="wrapper_small mobile-hide tablet-hide">
+        <section class="success" id="success">
+            <div class="wrapper_small mobile-hide tablet-hide success-desctop">
                 <div class="row">
                     <div class="success-item">
                         <div class="success-item__icon">
@@ -204,170 +207,170 @@
                     </div>
                 </div>
             </div>
+
+            <!-- mobile-success -->
+                <div class="success-mobile">
+                    <div class="wrapper_small mobile-hide tablet-hide">
+                        <div class="section-inner-mobile">
+                            <div class="section-title success-title success-title-mobile">
+                                Формула успешности 
+                                <span>ремонта от компании Оптима</span>
+                            </div>
+                            <div class="row-tablet">
+                                <div class="success-item">
+                                    <div class="success-item__icon">
+                                        <div class="success-item-popup success-item-popup-01 iconTriangle">
+                                            Работы ведутся точно по графику со строгим cоблюдением сроков ремонта, указанных в договоре.
+                                        </div>
+                                        <div class="success-item__icon-inner"></div>
+                                        <span class="success-item__icon-inner-text">01</span>
+                                    </div>
+                                    <div class="success-item__desc">Делаем объекты в конкретный срок</div>
+                                    <div class="success__item-desc"></div>
+                                </div>
+
+                                <div class="success-item success-item2">
+                                    <div class="success-item__icon">
+                                        <div class="success-item-popup success-item-popup-01 iconTriangle">
+                                            Наш профессиональный опыт реализации объектов и задач различного назначения и масштаба.
+                                        </div>
+                                        <div class="success-item__icon-inner"></div>
+                                        <span class="success-item__icon-inner-text">02</span>
+                                    </div>
+                                    <div class="success-item__desc">Подстраиваемость под любую задачу</div>
+                                    <div class="success__item-desc"></div>
+                                </div>
+
+                                <div class="success-item success-item3">
+                                    <div class="success-item__icon">
+                                        <div class="success-item-popup success-item-popup-01 iconTriangle">
+                                            Работы ведутся точно по графику со строгим соблюдением сроков ремонта, указанных в договоре.
+                                        </div>
+                                        <div class="success-item__icon-inner"></div>
+                                        <span class="success-item__icon-inner-text">03</span>
+                                    </div>
+                                    <div class="success-item__desc">Разумное распределение бюджета</div>
+                                    <div class="success__item-desc"></div>
+                                </div>    
+                            </div>
+                            
+                            <div class="row-tablet">
+                                <div class="success-item">
+                                    <div class="success-item__icon">
+                                        <div class="success-item-popup success-item-popup-01 iconTriangle">
+                                            Стоимость услуг, зафиксированная в договоре, не меняется в процессе выполнения работ. Вы можете быть уверены в изначальной цене!
+                                        </div>
+                                        <div class="success-item__icon-inner"></div>
+                                        <span class="success-item__icon-inner-text">04</span>
+                                    </div>
+                                    <div class="success-item__desc">Гарантируем фиксированную цену</div>
+                                    <div class="success__item-desc"></div>
+                                </div>
+
+                                <div class="success-item">
+                                    <div class="success-item__icon">
+                                        <div class="success-item-popup success-item-popup-01 iconTriangle">
+                                            Стоимость фиксируется в договоре и не меняется в процессе работы. Мы предлагаем наличный и без наличный расчет, оплату на карту.
+                                        </div>
+                                        <div class="success-item__icon-inner"></div>
+                                        <span class="success-item__icon-inner-text">05</span>
+                                    </div>
+                                    <div class="success-item__desc">Несколько вариантов оплаты и рассрочка</div>
+                                    <div class="success__item-desc"></div>
+                                </div>
+                               
+                                <div class="success-item">
+                                    <div class="success-item__icon">
+                                        <div class="success-item-popup success-item-popup-01 iconTriangle">
+                                            Сами вывозим и утилизируем мусор. По приезду, вы войдете в чистое жилое помещение, в котором можно сразу жить.
+                                        </div>
+                                        <div class="success-item__icon-inner"></div>
+                                        <span class="success-item__icon-inner-text">06</span>
+                                    </div>
+                                    <div class="success-item__desc">Оставляем чистоту после ремонта</div>
+                                    <div class="success__item-desc"></div>
+                                </div>    
+                            </div>
+
+                            <div class="row-mobile">
+                                <div class="success-item">
+                                    <div class="success-item__icon">
+                                        <div class="success-item-popup success-item-popup-01 iconTriangle">
+                                            Работы ведутся точно по графику со строгим cоблюдением сроков ремонта, указанных в договоре.
+                                        </div>
+                                        <div class="success-item__icon-inner"></div>
+                                        <span class="success-item__icon-inner-text">01</span>
+                                    </div>
+                                    <div class="success-item__desc">Делаем объекты в конкретный срок</div>
+                                    <div class="success__item-desc"></div>
+                                </div>
+
+                                <div class="success-item success-item2">
+                                    <div class="success-item__icon">
+                                        <div class="success-item-popup success-item-popup-01 iconTriangle">
+                                            Наш профессиональный опыт реализации объектов и задач различного назначения и масштаба.
+                                        </div>
+                                        <div class="success-item__icon-inner"></div>
+                                        <span class="success-item__icon-inner-text">02</span>
+                                    </div>
+                                    <div class="success-item__desc">Подстраиваемость под любую задачу</div>
+                                    <div class="success__item-desc"></div>
+                                </div>
+
+                                <div class="success-item success-item3">
+                                    <div class="success-item__icon">
+                                        <div class="success-item-popup success-item-popup-01 iconTriangle">
+                                            Работы ведутся точно по графику со строгим соблюдением сроков ремонта, указанных в договоре.
+                                        </div>
+                                        <div class="success-item__icon-inner"></div>
+                                        <span class="success-item__icon-inner-text">03</span>
+                                    </div>
+                                    <div class="success-item__desc">Разумное распределение бюджета</div>
+                                    <div class="success__item-desc"></div>
+                                </div> 
+
+                                <div class="success-item">
+                                    <div class="success-item__icon">
+                                        <div class="success-item-popup success-item-popup-01 iconTriangle">
+                                            Стоимость услуг, зафиксированная в договоре, не меняется в процессе выполнения работ. Вы можете быть уверены в изначальной цене!
+                                        </div>
+                                        <div class="success-item__icon-inner"></div>
+                                        <span class="success-item__icon-inner-text">04</span>
+                                    </div>
+                                    <div class="success-item__desc">Гарантируем фиксированную цену</div>
+                                    <div class="success__item-desc"></div>
+                                </div>
+
+                                <div class="success-item">
+                                    <div class="success-item__icon">
+                                        <div class="success-item-popup success-item-popup-01 iconTriangle">
+                                            Стоимость фиксируется в договоре и не меняется в процессе работы. Мы предлагаем наличный и без наличный расчет, оплату на карту.
+                                        </div>
+                                        <div class="success-item__icon-inner"></div>
+                                        <span class="success-item__icon-inner-text">05</span>
+                                    </div>
+                                    <div class="success-item__desc">Несколько вариантов оплаты и рассрочка</div>
+                                    <div class="success__item-desc"></div>
+                                </div>
+                               
+                                <div class="success-item">
+                                    <div class="success-item__icon">
+                                        <div class="success-item-popup success-item-popup-01 iconTriangle">
+                                            Сами вывозим и утилизируем мусор. По приезду, вы войдете в чистое жилое помещение, в котором можно сразу жить.
+                                        </div>
+                                        <div class="success-item__icon-inner"></div>
+                                        <span class="success-item__icon-inner-text">06</span>
+                                    </div>
+                                    <div class="success-item__desc">Оставляем чистоту после ремонта</div>
+                                    <div class="success__item-desc"></div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            <!-- mobile-success-end -->
         </section>
     <!-- success-end -->
-
-    <!-- mobile-success -->
-        <section class="success-mobile" id="success">
-            <div class="wrapper_small mobile-hide tablet-hide">
-                <div class="section-inner-mobile">
-                    <div class="section-title success-title success-title-mobile">
-                        Формула успешности 
-                        <span>ремонта от компании Оптима</span>
-                    </div>
-                    <div class="row-tablet">
-                        <div class="success-item">
-                            <div class="success-item__icon">
-                                <div class="success-item-popup success-item-popup-01 iconTriangle">
-                                    Работы ведутся точно по графику со строгим cоблюдением сроков ремонта, указанных в договоре.
-                                </div>
-                                <div class="success-item__icon-inner"></div>
-                                <span class="success-item__icon-inner-text">01</span>
-                            </div>
-                            <div class="success-item__desc">Делаем объекты в конкретный срок</div>
-                            <div class="success__item-desc"></div>
-                        </div>
-
-                        <div class="success-item success-item2">
-                            <div class="success-item__icon">
-                                <div class="success-item-popup success-item-popup-01 iconTriangle">
-                                    Наш профессиональный опыт реализации объектов и задач различного назначения и масштаба.
-                                </div>
-                                <div class="success-item__icon-inner"></div>
-                                <span class="success-item__icon-inner-text">02</span>
-                            </div>
-                            <div class="success-item__desc">Подстраиваемость под любую задачу</div>
-                            <div class="success__item-desc"></div>
-                        </div>
-
-                        <div class="success-item success-item3">
-                            <div class="success-item__icon">
-                                <div class="success-item-popup success-item-popup-01 iconTriangle">
-                                    Работы ведутся точно по графику со строгим соблюдением сроков ремонта, указанных в договоре.
-                                </div>
-                                <div class="success-item__icon-inner"></div>
-                                <span class="success-item__icon-inner-text">03</span>
-                            </div>
-                            <div class="success-item__desc">Разумное распределение бюджета</div>
-                            <div class="success__item-desc"></div>
-                        </div>    
-                    </div>
-                    
-                    <div class="row-tablet">
-                        <div class="success-item">
-                            <div class="success-item__icon">
-                                <div class="success-item-popup success-item-popup-01 iconTriangle">
-                                    Стоимость услуг, зафиксированная в договоре, не меняется в процессе выполнения работ. Вы можете быть уверены в изначальной цене!
-                                </div>
-                                <div class="success-item__icon-inner"></div>
-                                <span class="success-item__icon-inner-text">04</span>
-                            </div>
-                            <div class="success-item__desc">Гарантируем фиксированную цену</div>
-                            <div class="success__item-desc"></div>
-                        </div>
-
-                        <div class="success-item">
-                            <div class="success-item__icon">
-                                <div class="success-item-popup success-item-popup-01 iconTriangle">
-                                    Стоимость фиксируется в договоре и не меняется в процессе работы. Мы предлагаем наличный и без наличный расчет, оплату на карту.
-                                </div>
-                                <div class="success-item__icon-inner"></div>
-                                <span class="success-item__icon-inner-text">05</span>
-                            </div>
-                            <div class="success-item__desc">Несколько вариантов оплаты и рассрочка</div>
-                            <div class="success__item-desc"></div>
-                        </div>
-                       
-                        <div class="success-item">
-                            <div class="success-item__icon">
-                                <div class="success-item-popup success-item-popup-01 iconTriangle">
-                                    Сами вывозим и утилизируем мусор. По приезду, вы войдете в чистое жилое помещение, в котором можно сразу жить.
-                                </div>
-                                <div class="success-item__icon-inner"></div>
-                                <span class="success-item__icon-inner-text">06</span>
-                            </div>
-                            <div class="success-item__desc">Оставляем чистоту после ремонта</div>
-                            <div class="success__item-desc"></div>
-                        </div>    
-                    </div>
-
-                    <div class="row-mobile">
-                        <div class="success-item">
-                            <div class="success-item__icon">
-                                <div class="success-item-popup success-item-popup-01 iconTriangle">
-                                    Работы ведутся точно по графику со строгим cоблюдением сроков ремонта, указанных в договоре.
-                                </div>
-                                <div class="success-item__icon-inner"></div>
-                                <span class="success-item__icon-inner-text">01</span>
-                            </div>
-                            <div class="success-item__desc">Делаем объекты в конкретный срок</div>
-                            <div class="success__item-desc"></div>
-                        </div>
-
-                        <div class="success-item success-item2">
-                            <div class="success-item__icon">
-                                <div class="success-item-popup success-item-popup-01 iconTriangle">
-                                    Наш профессиональный опыт реализации объектов и задач различного назначения и масштаба.
-                                </div>
-                                <div class="success-item__icon-inner"></div>
-                                <span class="success-item__icon-inner-text">02</span>
-                            </div>
-                            <div class="success-item__desc">Подстраиваемость под любую задачу</div>
-                            <div class="success__item-desc"></div>
-                        </div>
-
-                        <div class="success-item success-item3">
-                            <div class="success-item__icon">
-                                <div class="success-item-popup success-item-popup-01 iconTriangle">
-                                    Работы ведутся точно по графику со строгим соблюдением сроков ремонта, указанных в договоре.
-                                </div>
-                                <div class="success-item__icon-inner"></div>
-                                <span class="success-item__icon-inner-text">03</span>
-                            </div>
-                            <div class="success-item__desc">Разумное распределение бюджета</div>
-                            <div class="success__item-desc"></div>
-                        </div> 
-
-                        <div class="success-item">
-                            <div class="success-item__icon">
-                                <div class="success-item-popup success-item-popup-01 iconTriangle">
-                                    Стоимость услуг, зафиксированная в договоре, не меняется в процессе выполнения работ. Вы можете быть уверены в изначальной цене!
-                                </div>
-                                <div class="success-item__icon-inner"></div>
-                                <span class="success-item__icon-inner-text">04</span>
-                            </div>
-                            <div class="success-item__desc">Гарантируем фиксированную цену</div>
-                            <div class="success__item-desc"></div>
-                        </div>
-
-                        <div class="success-item">
-                            <div class="success-item__icon">
-                                <div class="success-item-popup success-item-popup-01 iconTriangle">
-                                    Стоимость фиксируется в договоре и не меняется в процессе работы. Мы предлагаем наличный и без наличный расчет, оплату на карту.
-                                </div>
-                                <div class="success-item__icon-inner"></div>
-                                <span class="success-item__icon-inner-text">05</span>
-                            </div>
-                            <div class="success-item__desc">Несколько вариантов оплаты и рассрочка</div>
-                            <div class="success__item-desc"></div>
-                        </div>
-                       
-                        <div class="success-item">
-                            <div class="success-item__icon">
-                                <div class="success-item-popup success-item-popup-01 iconTriangle">
-                                    Сами вывозим и утилизируем мусор. По приезду, вы войдете в чистое жилое помещение, в котором можно сразу жить.
-                                </div>
-                                <div class="success-item__icon-inner"></div>
-                                <span class="success-item__icon-inner-text">06</span>
-                            </div>
-                            <div class="success-item__desc">Оставляем чистоту после ремонта</div>
-                            <div class="success__item-desc"></div>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-        </section>
-   <!-- mobile-success-end -->
 
     <!-- repair -->
         <section class="repair-types" id="repair-types">
@@ -497,9 +500,9 @@
                             <sup>*</sup>
                             Введите ваш номер:
                         </span>
-                        <input type="text" class="feedback-block__form-input feedback-block__form-input_phone" name="phone" id="feedback-input4" required placeholder="+7 (___)___-__-" maxlength="18" >
+                        <input type="tel" class="feedback-block__form-input feedback-block__form-input_phone" name="phone" id="feedback-input4" required placeholder="+7 (___)___-__-" maxlength="18" >
                     </label>
-                    <button class="btn button-feedback-block">Перезвоните мне</button>
+                    <button class="btn button-feedback-block" type="submit">Перезвоните мне</button>
                     <div class="checkbox checkbox-feedback-block">
                         <input class="checkbox__input" type="checkbox" id="checkbox2" required>
                         <label class="checkbox__label" for="checkbox2"></label>
@@ -807,7 +810,7 @@
                         <div class="director-avatar__desc">
                             Мы с любовью создаем уют для Вашего дома. Получите от меня персональную консультацию!
                         </div>
-                        <button class="btn">Проконсультироваться</button>
+                        <button class="btn btnConsultation">Проконсультироваться</button>
                     </div>
                     <div class="director-content">
                         <div class="section-title director__title ">
@@ -969,7 +972,7 @@
                     <span>стоимости ремонта Вашего помещения</span>
                 </div>
                 <div class="feedback-block__desc">Обсудите проект со специалистом или вызовите замерщика.</div>
-                <form class="feedback-block__form" id="feedback2">
+                <form class="feedback-block__form" id="feedback3">
                     <label class="name line">
                         <span>
                             <sup>*</sup>
@@ -982,12 +985,12 @@
                             <sup>*</sup>
                             Введите ваш номер:
                         </span>
-                        <input type="text" class="feedback-block__form-input feedback-block__form-input_phone" name="phone" id="feedback-input4" required placeholder="+7 (___)___-__-" maxlength="18" >
+                        <input type="tel" class="feedback-block__form-input feedback-block__form-input_phone" name="phone" id="feedback-input5" required placeholder="+7 (___)___-__-" maxlength="18" >
                     </label>
                     <button class="btn button-feedback-block">Перезвоните мне</button>
                     <div class="checkbox checkbox-feedback-block">
-                        <input class="checkbox__input" type="checkbox" id="checkbox2" required>
-                        <label class="checkbox__label" for="checkbox2"></label>
+                        <input class="checkbox__input" type="checkbox" id="checkbox3" required>
+                        <label class="checkbox__label" for="checkbox3"></label>
                         <div class="checkbox__desc">
                             Нажимая на кнопку, Вы даете согласие на 
                             <span class="link-privacy">обработку своих персональных данных</span>
@@ -1039,7 +1042,7 @@
     <!-- partners-end -->
 
     <!-- footer -->
-        <footer class="footer">
+        <footer class="footer" id="contacts">
             <div class="footer__inner">
                 <div class="maps" id="map"></div>
                 <div class="contacts">
@@ -1093,7 +1096,7 @@
        </div>    
    </div> -->
     
-
+ 
    
 
     <!-- popup-thank -->
@@ -1109,20 +1112,20 @@
         </div>
     <!-- popup-thank-end -->
 
-    <!-- feedback-popup -->
-        <div class="feedback feedback-popup">
+    <!-- popup-consultation -->
+        <form class="popup-consultation feedback-popup">
             <div class="feedback-wrap">
             <div class="close close-thank"></div>
                 <div class="feedback__icon"></div>
                 <div class="feedback__title">Получите консультацию от специалиста в удобное для Вас время</div>
-                <div class="feedback__form" id="feedback1">
+                <div class="feedback__form" id="feedback4">
                     <div class="feedback__input">
-                        <input class="input feedback__input-input" type="text" placeholder="Введите номер телефона" id="feedback-input1" minlength="18">
+                        <input class="input feedback__input-input" type="tel" placeholder="Введите номер телефона" id="feedback-input1" minlength="18">
                     </div>
                     <button class="btn">Перезвоните мне</button>
                     <div class="checkbox">
-                        <input class="checkbox__input" type="checkbox" id="checkbox1">
-                        <label class="checkbox__label" for="checkbox1"></label>
+                        <input class="checkbox__input" type="checkbox" id="checkbox4">
+                        <label class="checkbox__label" for="checkbox4"></label>
                         <div class="checkbox__desc checkbox__desc_round-feedback">
                             Я соглашаюсь с 
                             <span class="link-privacy">политикой конфиденциальности</span>
@@ -1130,8 +1133,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    <!-- feedback-popup-end -->
+        </form>
+    <!-- popup-consultation-end -->
 
     <!-- menu-popup -->
         <div class="popup popup-menu">
@@ -1143,15 +1146,15 @@
                             <div class="popup-menu-title">Меню</div>
                             <div class="popup-menu__list">
                                 <ul class="active_menu">
-                                    <li><a href="#">главная</a></li>
-                                    <li><a href="#">преимущества</a></li>
-                                    <li><a href="#">виды ремонта</a></li>
-                                    <li><a href="#">наше портфолио</a></li>
-                                    <li><a href="#">решение проблем</a></li>
-                                    <li><a href="#">директор</a></li>
-                                    <li><a href="#">часто задаваемые вопросы</a></li>
-                                    <li><a href="#">наши партнеры</a></li>
-                                    <li><a href="#">контакты</a></li>
+                                    <li><a href="#top">главная</a></li>
+                                    <li><a href="#success">преимущества</a></li>
+                                    <li><a href="#repair-types">виды ремонта</a></li>
+                                    <li><a href="#portfolio">наше портфолио</a></li>
+                                    <li><a href="#problems">решение проблем</a></li>
+                                    <li><a href="#director">директор</a></li>
+                                    <li><a href="#faq">часто задаваемые вопросы</a></li>
+                                    <li><a href="#partners">наши партнеры</a></li>
+                                    <li><a href="#contacts">контакты</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -1163,8 +1166,8 @@
     <!-- menu-popup-end -->
 
     <!-- arrow-top -->
-        <div class="arrow-top">
-            <a class="arrow" href="#">
+        <div class="arrow-top" id="totop">
+            <a class="arrow" href="#top">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                  width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;"
                  xml:space="preserve">
