@@ -586,7 +586,7 @@
             width: 817px;
             height: 817px;
             background-image: url('../img/svg/repair-types_slider_decor.svg');
-            z-index: 0;
+            z-index: -1;
         }
     }
 
@@ -610,7 +610,7 @@
         box-shadow: 0 3.05528px 15.2764px rgba(50,40,35,.1);
         background: #fff;
         cursor: pointer;
-        z-index: 5;
+        z-index: 100;
         transition: background .3s ease-out;
         
         &:hover{
@@ -675,6 +675,7 @@
         cursor: pointer;
         background-color: transparent;
         transition: all .3s;
+        outline: none;
         
         &:hover{
             border-color: #CBC7BF;
@@ -700,7 +701,9 @@
         }
     }
     .active{
-        border: 2px solid #F48922;
+        border: 2px solid #F48922 !important;
+        border-radius: 25px;
+        outline: none;
         
         &::before, &::after{
              content: '';
@@ -721,7 +724,8 @@
             top: 43px;
             right: 40px;
         }
-    }
+    } 
+    
     .repair-types-nav__item {
         margin-top: 22px;
         font-size: 20px;
@@ -730,6 +734,32 @@
     .repair-types__inner{
         display: flex;
     }
+    .hidden{
+        display: none;
+    }
+    .tabs-slider{
+        width: 500px;
+        height: 500px;
+        
+        // transition: all .3s;
+        img{
+            width: 500px;
+            height: 500px;
+        }
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .item-active{
+        display: block !important;
+    }
+
+    .slider{
+        display: none;
+    }
+
+    /* .tabs-slider img:not(:first-child){
+        opacity: 0;
+    } */
 /* repair-end */
 
 /* feedback-block */
