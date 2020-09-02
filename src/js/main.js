@@ -1,5 +1,9 @@
 'use strict';
 
+//plagin
+import GLightbox from 'glightbox';
+
+
 import map from './modules/map';
 import asd from './modules/func';
 import popup from './modules/popup';
@@ -20,3 +24,12 @@ maskPhone();
 validationForm();
 repair();
 // sendForm();
+
+
+
+//plugins
+const lightbox = GLightbox ({
+	 	touchNavigation: true,
+    loop: true
+}) ; 
+

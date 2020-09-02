@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "be": "0.0.3",
+    "glightbox": "^3.0.3",
     "install": "^0.13.0",
     "modules": "^0.4.0",
     "to": "^0.2.9"
