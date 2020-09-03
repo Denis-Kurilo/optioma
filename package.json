@@ -13,6 +13,7 @@
     "glightbox": "^3.0.3",
     "install": "^0.13.0",
     "modules": "^0.4.0",
+    "swiper": "^6.1.2",
     "to": "^0.2.9"
   },
   "devDependencies": {

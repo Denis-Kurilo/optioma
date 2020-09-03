@@ -999,12 +999,16 @@
     }
     .portfolio__slider-inner {
         display: flex;
-        flex-wrap: wrap;
+        width: 100%;
         margin: 60px 0 200px 8px;
         border-radius: 20px;
         overflow: hidden;
         z-index: 1;
         position: relative;
+    }
+    .portfolio__slider-item-wrap{
+        display: flex;
+        flex-direction: column;
     }
 
     .portfolio__slider{
@@ -1055,9 +1059,21 @@
             color: #fff;
         }
     }
+    .portfolio__slider-item-wrap>.portfolio__slider-item:not(:last-child){
+        margin-bottom: 5px;
+    }
+
     .portfolio__slider-item:hover .portfolio__slider-hover {
         visibility: visible;
         opacity: 1;
+    }
+    .swiper-wrapper{
+       
+        
+    }
+    .swiper-slide{
+        width: auto;
+        height: auto;
     }
 /* portfolio-end */
 
