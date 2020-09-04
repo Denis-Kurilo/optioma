@@ -22,13 +22,12 @@ navList.addEventListener('click', (e) => {
 		repairTypesNavItem.forEach((item, i) => {
 			if(item === target){
 				toggleTabContent(i);
-				console.dir(tabsSlider[i].children)
 			}
 		});
 	}
 });	
  
-	const sliders = () => {
+	/*const sliders = () => {
 		const sliderContent = document.querySelector('.repair-types-slider-wrap'),
 				slider = document.querySelectorAll('.slider'),
 				slider2 = document.querySelectorAll('.types-repair2 .slider'),
@@ -69,7 +68,7 @@ navList.addEventListener('click', (e) => {
 		}
 		startSlide();
 	};
-	sliders();
+	sliders();*/
 };
 
 export default repair;
