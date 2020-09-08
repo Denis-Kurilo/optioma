@@ -94,23 +94,16 @@ const lightbox = GLightbox ({
 /*repair*/
 
 
-/*new Swiper('.swiper-container', {
-	 slidesPerView: 1,
+/*var swiper = new Swiper('.repair-types-slider-wrap', {
+  parallax: true,
+autoHeight: true,
+setWrapperSize: true,
+slidesPerView: 1,
+spaceBetween: 30,
+centeredSlides: true,
   navigation: {
     nextEl: '.slider-repair-arrow_right',
     prevEl: '.slider-repair-arrow_left',
-  }
-});
-
-let tabInputs = document.querySelectorAll('.tabInput');
-
-tabInputs.forEach(function(input) {
-
-  input.addEventListener('change', function() {
-    let id = input.value;
-    let thisSwiper = document.getElementById('swiper' + id);
-    thisSwiper.swiper.update();
-  });
-
+  },
 });*/
 	
