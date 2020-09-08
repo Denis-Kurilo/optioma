@@ -92,28 +92,25 @@ const lightbox = GLightbox ({
 /*parnters-end*/
 
 /*repair*/
-	Swiper.use([Navigation]);
-	const swiperRepair = new Swiper('.repair-types-slider-wrap', {
-	  loop: true,
-	  slidesPerView: 1,
-	  navigation: {
-	    prevEl: '.slider-repair-arrow_left',
-	    nextEl: '.slider-repair-arrow_right',
-	  },
-	  /*breakpoints: {
-	    320: {
-	      slidesPerView: 1,
-	    },
-	    480: {
-	      slidesPerView: 2,
-	    },
-	    767: {
-	      slidesPerView: 3,
-	      // spaceBetween: 5,
-	    }
-	  }*/
-	});
-/*repair-end*/
 
 
+/*new Swiper('.swiper-container', {
+	 slidesPerView: 1,
+  navigation: {
+    nextEl: '.slider-repair-arrow_right',
+    prevEl: '.slider-repair-arrow_left',
+  }
+});
 
+let tabInputs = document.querySelectorAll('.tabInput');
+
+tabInputs.forEach(function(input) {
+
+  input.addEventListener('change', function() {
+    let id = input.value;
+    let thisSwiper = document.getElementById('swiper' + id);
+    thisSwiper.swiper.update();
+  });
+
+});*/
+	
