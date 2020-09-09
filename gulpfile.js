@@ -17,8 +17,8 @@ const {src, dest, parallel, series, watch} = require('gulp'),
 			uglify = require('gulp-uglify-es').default,
 			tiny = require('gulp-tinypng-compress'),
 			gutil = require('gulp-util'),
-			ftp = require('vinyl-ftp'),
-			htmlmin = require('gulp-htmlmin');
+			ftp = require('vinyl-ftp');
+			// htmlmin = require('gulp-htmlmin');
 
 
 const fonts = () => {
@@ -94,7 +94,7 @@ const htmlInclude = () => {
 			prefix: '@',
 			basepath: '@file'
 		}))
-		.pipe(htmlmin({ collapseWhitespace: true }))
+		// .pipe(htmlmin({ collapseWhitespace: true }))
 		.pipe(dest('./app'))
 		.pipe(browserSync.stream());
 }

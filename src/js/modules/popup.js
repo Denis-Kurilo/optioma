@@ -4,16 +4,19 @@ const popup = () => {
 	const popupMobileMenu = () => {
 		const popupMenu = document.querySelector('.popup-dialog-menu'),
 			menuIcon = document.querySelector('.menuIcon'),
+			body = document.querySelector('.body'),
 			menuIconMobile = document.querySelector('.menuIcon--mobile');
 
 		menuIcon.addEventListener('click', () => {
 			popupMenu.style.visibility = "visible";
 			popupMenu.style.transform = "translate3d(0,0,0)";
+			body.style.overflow = 'hidden';
 		});
 
 		menuIconMobile.addEventListener('click', () => {
 			popupMenu.style.visibility = "visible";
 			popupMenu.style.transform = "translate3d(0,0,0)";
+			body.style.overflow = 'hidden';
 		});
 
 		popupMenu.addEventListener('click', (event) => {
@@ -21,6 +24,7 @@ const popup = () => {
 			if(target.matches('.close-menu') || target.matches('li a')){
 				popupMenu.style.visibility = "hidden";
 				popupMenu.style.transform = "translate3d(645px,0,0)";
+				body.style.overflow = 'visible';
 			}
 		});
 	}
