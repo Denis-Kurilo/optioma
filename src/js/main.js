@@ -13,6 +13,7 @@ import validationForm from './modules/validationForm';
 import repair from './modules/repairTabs';
 import designTabs from './modules/designTabs';
 import faq from './modules/faq';
+import problemsSlide from './modules/problemsSlide';
 // import sendForm from './modules/sendForm';
 
 
@@ -31,6 +32,7 @@ validationForm();
 repair();
 faq();
 designTabs();
+problemsSlide();
 // sendForm();
 
 
@@ -91,7 +93,16 @@ const lightbox = GLightbox ({
 	});
 /*parnters-end*/
 
-/*repair*/
+/*problems*/
+/*Swiper.use([Navigation]);
+	const swiperProblems = new Swiper('.problems-wrap', {
+	  loop: true,
+	  slidesPerView: 1,
+	  navigation: {
+	    prevEl: '.problems__slider-arrowL',
+	    nextEl: '.problems__slider-arrowR',
+	  },
+	});*/
 
 
 /*var swiper = new Swiper('.repair-types-slider-wrap', {
