@@ -5,7 +5,7 @@ import GLightbox from 'glightbox';
 import Swiper, {Navigation} from 'swiper';
 
 import map from './modules/map';
-import asd from './modules/func';
+import resources from './modules/resources';
 import popup from './modules/popup';
 import scrollDown from './modules/scrollDown';
 import maskPhone from './modules/maskPhone';
@@ -24,7 +24,7 @@ import problemsSlide from './modules/problemsSlide';
 
 
 map();
-asd();
+resources();
 scrollDown();
 popup();
 maskPhone();

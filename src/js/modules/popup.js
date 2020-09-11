@@ -27,7 +27,20 @@ const popup = () => {
 				body.style.overflow = 'visible';
 			}
 		});
+
+	window.addEventListener('click', (e) => {
+        let target = e.target;
+        if (!target.closest('.menuIcon')) {
+         	popupMenu.style.visibility = "hidden";
+					popupMenu.style.transform = "translate3d(645px,0,0)";
+					body.style.overflow = 'visible';
+        };
+    });
+
 	}
+
+
+
 	popupMobileMenu();
 	//menu-end
 
