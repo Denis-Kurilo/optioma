@@ -11,12 +11,14 @@ const popup = () => {
 			popupMenu.style.visibility = "visible";
 			popupMenu.style.transform = "translate3d(0,0,0)";
 			body.style.overflow = 'hidden';
+			body.style.paddingRight = '16px';
 		});
 
 		menuIconMobile.addEventListener('click', () => {
 			popupMenu.style.visibility = "visible";
 			popupMenu.style.transform = "translate3d(0,0,0)";
 			body.style.overflow = 'hidden';
+			body.style.paddingRight = '16px';
 		});
 
 		popupMenu.addEventListener('click', (event) => {
@@ -25,6 +27,7 @@ const popup = () => {
 				popupMenu.style.visibility = "hidden";
 				popupMenu.style.transform = "translate3d(645px,0,0)";
 				body.style.overflow = 'visible';
+				body.style.paddingRight = '0px';
 			}
 		});
 
@@ -34,6 +37,7 @@ const popup = () => {
          	popupMenu.style.visibility = "hidden";
 					popupMenu.style.transform = "translate3d(645px,0,0)";
 					body.style.overflow = 'visible';
+					body.style.paddingRight = '0px';
         };
     });
 
