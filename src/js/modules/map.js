@@ -7,7 +7,7 @@ ymaps.ready(init);
 
     function init(){     
         myMap = new ymaps.Map("map", {
-            center: [44.504216306347296,34.15167827740982],
+            center: [44.503972, 34.151827],
             zoom: 17,
             controls: ['smallMapDefaultSet']
         });
@@ -28,8 +28,8 @@ ymaps.ready(init);
 		});
 
     	
-        myPlacemark1 = new ymaps.Placemark([44.504216306347296,34.15167827740982], { 
-        	balloonContentHeader: '<span class="map-color">Строительная компания "Оптима"</span>',
+        myPlacemark1 = new ymaps.Placemark([44.503972, 34.151827], { 
+        	balloonContentHeader: '<span class="map-color">Строительная компания " СК Оптима"</span>',
             balloonContentFooter: 'Республика Крым, г.Ялта, ул. Южнобережное шоссе, 38',
             hintContent: 'Строительная компания "Оптима"'
         });

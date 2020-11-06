@@ -8,18 +8,6 @@ const validationForm = () => {
             elem.value = input.replace(/[^а-яёА-ЯЁ\s]+/ig, '');
         });
     });
-    /*tel.forEach(elem => {
-        elem.addEventListener('input', (e) => {
-            let target = e.target;
-            checkbox.forEach((elem, index) => {
-                if(target.value.length < 18){
-                    elem.setAttribute('disabled', 'disabled');
-                }else{
-                    elem.removeAttribute('disabled');
-                }   
-            });  
-        })
-    });*/
 };
 validationForm();
 export default validationForm;

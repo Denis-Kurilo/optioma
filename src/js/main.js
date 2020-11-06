@@ -14,12 +14,7 @@ import repair from './modules/repairTabs';
 import designTabs from './modules/designTabs';
 import faq from './modules/faq';
 import problemsSlide from './modules/problemsSlide';
-// import sendForm from './modules/sendForm';
-
-
-// import Swiper JS
-
-
+import sendForm from './modules/sendForm';
 
 
 
@@ -33,7 +28,9 @@ repair();
 faq();
 designTabs();
 problemsSlide();
-// sendForm();
+sendForm();
+
+
 
 
 
@@ -62,59 +59,22 @@ const lightbox = GLightbox ({
 	    },
 	    767: {
 	      slidesPerView: 3,
-	      // spaceBetween: 5,
 	    }
 	  }
 	});
 /*portfolio-end*/
 
-/*parnters*/
-	Swiper.use([Navigation]);
-	const swiperPartners = new Swiper('.partners-slider', {
-	  loop: true,
-	  slidesPerView: 3,
-	  spaceBetween: 20,
-	  navigation: {
-	    prevEl: '.slider-partners-arrow_left',
-	    nextEl: '.slider-partners-arrow_right',
-	  },
-	  breakpoints: {
-	    320: {
-	      slidesPerView: 1,
-	    },
-	    480: {
-	      slidesPerView: 2,
-	    },
-	    767: {
-	      slidesPerView: 3,
-	      // spaceBetween: 5,
-	    }
-	  }
-	});
-/*parnters-end*/
 
-/*problems*/
-/*Swiper.use([Navigation]);
-	const swiperProblems = new Swiper('.problems-wrap', {
-	  loop: true,
-	  slidesPerView: 1,
-	  navigation: {
-	    prevEl: '.problems__slider-arrowL',
-	    nextEl: '.problems__slider-arrowR',
-	  },
-	});*/
+/*Scrollbar*/
+  /*var options = {
+  	'damping': 0.5,
+  }
+	Scrollbar.init(document.querySelector('#my-scrollbar'));*/
+/*Scrollbar-end*/
 
 
-/*var swiper = new Swiper('.repair-types-slider-wrap', {
-  parallax: true,
-autoHeight: true,
-setWrapperSize: true,
-slidesPerView: 1,
-spaceBetween: 30,
-centeredSlides: true,
-  navigation: {
-    nextEl: '.slider-repair-arrow_right',
-    prevEl: '.slider-repair-arrow_left',
-  },
-});*/
-	
+/*get('scroll').onclick = function() {
+  get('scrollbox').style.top = -30 + get('scrollbox').offsetTop + 'px';*/
+
+
+

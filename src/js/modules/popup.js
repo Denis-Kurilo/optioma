@@ -42,9 +42,6 @@ const popup = () => {
     });
 
 	}
-
-
-
 	popupMobileMenu();
 	//menu-end
 
@@ -63,15 +60,28 @@ const popup = () => {
 		//popup-consultation
 			const popupConsultation = () => {
 				const btnConsultation = document.querySelector('.btnConsultation'),
-					 popupConsult = document.querySelector('.feedback-popup'),
-					 mobileBtn = document.querySelector('.mobile-btn');
+					 mobileBtn = document.querySelector('.mobile-btn'),
+					 feedbackPlaska = document.querySelector('.feedback-plaska'),
+					 popupConsult = document.querySelector('.feedback-popup');
 
-				btnConsultation.addEventListener('click', () => {
-					popupConsult.style.visibility = 'visible';
+				btnConsultation.addEventListener('click', (e) => {
+					let target = e.target;
+					if(target.closest('.btnConsultation')){
+						popupConsult.style.visibility = 'visible';
+					}
+					feedbackPlaska.addEventListener('click', () => {
+						popupConsult.style.visibility = 'hidden';
+					});
 				});
 
-				mobileBtn.addEventListener('click', () => {
-					popupConsult.style.visibility = 'visible';
+				mobileBtn.addEventListener('click', (e) => {
+					let target = e.target;
+					if(target.closest('.mobile-btn')){
+						popupConsult.style.visibility = 'visible';
+					}
+					feedbackPlaska.addEventListener('click', () => {
+						popupConsult.style.visibility = 'hidden';
+					});
 				});
 			}
 			popupConsultation();
@@ -79,8 +89,6 @@ const popup = () => {
 
 		const close = () => {
 			const form = document.querySelectorAll('form');
-
-
 			form.forEach((elem) => {
 				elem.addEventListener('click', (e) => {
 					let target = e.target;

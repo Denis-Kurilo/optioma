@@ -139,7 +139,7 @@ const scripts = () => {
 		})
 
 		.pipe(sourcemaps.init())
-		.pipe(uglify().on("error", notify.onError()))
+		// .pipe(uglify().on("error", notify.onError()))
 		.pipe(sourcemaps.write('.'))
 		.pipe(dest('./app/js'))
 		.pipe(browserSync.stream());

@@ -5,15 +5,15 @@ const sendForm = () => {
 
     const form = document.querySelectorAll('form');
 
-    const statusMessage = document.createElement('div');
-    statusMessage.style.cssText = 'font-size: 2rem; color: white';
+    const statusMessage = document.createElement('span');
+    statusMessage.style.cssText = 'font-size: 2rem; color: #F7941F; width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 2; font-weight: 600;';
 
-    setTimeout(() => {
+    /*setTimeout(() => {
         statusMessage.textContent = successMessage;
-    }, 5000); 
+    }, 5000);*/ 
 
     const postData = (body) => {
-        return fetch('../../resources/server.php', {
+        return fetch('../../resources/mail.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -56,6 +56,5 @@ const sendForm = () => {
         });
       });
     });
-    
 };
 export default sendForm;

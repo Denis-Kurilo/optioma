@@ -36,6 +36,4 @@ function maskPhone(selector, masked = "+7 (___) ___-__-__") {
 
 
 maskPhone('#feedback-input1');
-maskPhone('#feedback-input4');
-maskPhone('#feedback-input5');
 export default maskPhone;

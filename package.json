@@ -9,12 +9,15 @@
   "author": "Denis Kurilo",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^4.1.1",
     "be": "0.0.3",
     "glightbox": "^3.0.3",
     "install": "^0.13.0",
     "modules": "^0.4.0",
+    "smooth-scrollbar": "^8.5.3",
     "swiper": "^6.1.2",
-    "to": "^0.2.9"
+    "to": "^0.2.9",
+    "wowjs": "^1.1.3"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",

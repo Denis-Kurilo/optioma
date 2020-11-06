@@ -64,8 +64,4 @@ const sliders = () => {
 	};
 sliders();
 };
-
-
-
-
 export default designTabs;
