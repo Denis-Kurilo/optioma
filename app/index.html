@@ -963,14 +963,7 @@
     <!-- popup-thank-end -->
 
     <!-- popup-consultation -->
-        <form class="popup-consultation feedback-popup">
-            <!-- Hidden Required Fields -->
-            <input type="hidden" name="project_name" value="Мой сайт портфолио">
-            <input type="hidden" name="admin_from" value="admin@hoster.ru">
-            <input type="hidden" name="admin_email" value="webprogram2017@mail.ru">
-            <input type="hidden" name="form_subject" value="Сообщение с сайта с формы 'Заказа'">
-            <!-- END Hidden Required Fields -->
-
+        <form method="POST" action="resources/send.php" class="popup-consultation feedback-popup">
             <div class="feedback-plaska"></div>
             <div class="feedback-wrap">
             <div class="close close-thank"></div>
@@ -978,10 +971,10 @@
                 <div class="feedback__title">Получите консультацию в удобное для Вас время</div>
                 <div class="feedback__form" id="feedback4">
                     <div class="feedback__input">
-                        <input class="input feedback__input-input" type="tel" name="phone" placeholder="Введите номер телефона" id="phone feedback-input1" minlength="18">
+                        <input class="input feedback__input-input" type="tel" name="phone" placeholder="Введите номер телефона" id="feedback-input1" required minlength="18">
                         <input type="hidden" name="check" value="">
                     </div>
-                    <button type="submit"  class="btn">Перезвоните мне</button>
+                    <button type="submit" class="btn" disabled="disabled">Перезвоните мне</button>
                 </div>
             </div>
         </form>
